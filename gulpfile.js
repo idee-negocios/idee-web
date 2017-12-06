@@ -99,7 +99,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('templates', function() {
-  gulp.src('./*.pug')
+  gulp.src('./pages/*.pug')
   .pipe(plumber({ errorHandler: onError }))
   .pipe(pug())
   .pipe(gulp.dest('build/'));
@@ -161,12 +161,12 @@ gulp.task('default', function() {
 });
 
 gulp.task('setup', function() {
-  gulp.start('styles', 'templates', 'scripts', 'images', 'setup-src');
+  gulp.start('styles', 'templates', 'scripts', 'images');
 });
 
 gulp.task('watch', function() {
   gulp.watch('styles/**/*',                        ['styles']);
-  gulp.watch(['templates/**/*', './*.pug'],        ['templates']);
+  gulp.watch(['templates/**/*', './pages/*.pug'],        ['templates']);
   gulp.watch('js/*.js',                            ['scripts']);
   gulp.watch('img/**/*',                           ['images']);
 
