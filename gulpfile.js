@@ -14,15 +14,9 @@ var rename             = require("gulp-rename");
 var sass               = require('gulp-sass');
 var sourcemaps         = require('gulp-sourcemaps');
 var uglify             = require('gulp-uglify');
-// sudo npm install gulp-uglify browser-sync gulp-plumber gulp-autoprefixer gulp-sass gulp-pug gulp-imagemin gulp-cache gulp-clean-css gulp-sourcemaps gulp-concat beeper gulp-util gulp-rename gulp-notify --save-dev
 var jsVendorFiles      = [];             // Holds the js vendor files to be concatenated
 var myJsFiles          = ['js/*.js'];    // Holds the js files to be concatenated
 var fs                 = require('fs');  // ExistsSync var to check if font directory patch exist
-var bowerDirectory     = getBowerDirectory();
-var bootstrapJSPath    = bowerDirectory + "bootstrap/dist/js/bootstrap.min.js";
-var bootstrapCSSPath   = bowerDirectory + "bootstrap/dist/css/bootstrap.min.css";
-var bootstrapFontsPath = bowerDirectory + "bootstrap/dist/fonts/**.*";
-var jqueryPath         = bowerDirectory + "jquery/dist/jquery.min.js";
 var bootstrapExist     = false;
 var onError            = function(err) { // Custom error msg with beep sound and text color
     notify.onError({
@@ -33,18 +27,6 @@ var onError            = function(err) { // Custom error msg with beep sound and
     this.emit('end');
     gutil.log(gutil.colors.red(err));
 };
-
-function getBowerDirectory() {
-  var bowerComponents = "./bower_components";
-  if(fs.existsSync('.bowerrc')) {
-    var bowerrc = JSON.parse(fs.readFileSync('.bowerrc').toString());
-    return bowerrc.directory;
-  } else if (fs.existsSync(bowerComponents)) {
-    return bowerComponents + '/';
-  } else {
-    return '';
-  }
-}
 
 function setupJquery(data) {
   var jqueryCDN = '    script(src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}" crossorigin="anonymous")';
@@ -134,16 +116,6 @@ gulp.task('setup-src', function() {
 
   if(data[data.length - 1].indexOf('script(src="js/bundle.min.js")') > -1) {
     data.pop();
-  }
-
-  if(bowerDirectory) {
-    if(fs.existsSync(bootstrapJSPath) && !findKeyText(data, 'bootstrap.min.css')) {
-      setupBootstrap(data);
-    }
-
-    if(fs.existsSync(jqueryPath) && !bootstrapExist  && !findKeyText(data, 'jquery.min.js')) {
-      setupJquery(data);
-    }
   }
 
   if(!findKeyText(data, 'bundle.min.js')) {
