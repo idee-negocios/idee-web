@@ -1,3 +1,7 @@
-const hola = l => l + 1;
+import { hello } from './asd';
+console.log(hello);
 
-  console.log('Hola');
+// const hello = msg => `${msg}!`;
+// console.log(hello('Hello'));
+
+// $(() => console.log('hola'));

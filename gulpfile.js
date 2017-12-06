@@ -18,6 +18,12 @@ var jsVendorFiles      = [];             // Holds the js vendor files to be conc
 var myJsFiles          = ['js/*.js'];    // Holds the js files to be concatenated
 var fs                 = require('fs');  // ExistsSync var to check if font directory patch exist
 var bootstrapExist     = false;
+
+var babel = require('gulp-babel');
+var eslint = require('gulp-eslint');
+var webpack = require('webpack');
+var webpackConfig = require('./webpack.config');
+
 var onError            = function(err) { // Custom error msg with beep sound and text color
     notify.onError({
       title:    "Gulp error in " + err.plugin,
@@ -89,13 +95,34 @@ gulp.task('templates', function() {
 
 gulp.task('scripts', function() {
   return gulp.src(myJsFiles.concat(jsVendorFiles))
-  .pipe(plumber({ errorHandler: onError }))
-  .pipe(sourcemaps.init())
-  .pipe(gconcat('bundle.js'))
-  .pipe(uglify())
-  .pipe(sourcemaps.write())
-  .pipe(rename({ suffix: '.min'}))
-  .pipe(gulp.dest('build/js'));
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(babel())
+    .pipe(plumber({ errorHandler: onError }))
+    .pipe(sourcemaps.init())
+    .pipe(gconcat('bundle.js'))
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(rename({ suffix: '.min'}))
+    .pipe(gulp.dest('build/js'));
+});
+
+gulp.task('webpack', ['scripts'] function(callback) {
+  var myConfig = Object.create(webpackConfig);
+  myConfig.plugins = [
+		new webpack.optimize.DedupePlugin(),
+		new webpack.optimize.UglifyJsPlugin()
+  ];
+
+  // run webpack
+  webpack(myConfig, function(err, stats) {
+    if (err) throw new gutil.PluginError('webpack', err);
+    gutil.log('[webpack]', stats.toString({
+      colors: true,
+      progress: true
+    }));
+    callback();
+  });
 });
 
 gulp.task('images', function() {
