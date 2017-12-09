@@ -1,5 +1,6 @@
-import { asd } from './func';
+import $ from 'jquery';
 
 (() => {
-  console.log(asd('!'));
+  const text = $('.content');
+  text.html('<b>Hello</b>');
 })();

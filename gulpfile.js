@@ -14,13 +14,11 @@ var rename             = require("gulp-rename");
 var sass               = require('gulp-sass');
 var sourcemaps         = require('gulp-sourcemaps');
 var uglify             = require('gulp-uglify');
-var jsVendorFiles      = [];             // Holds the js vendor files to be concatenated
-var myJsFiles          = ['js/*.js'];    // Holds the js files to be concatenated
-var fs                 = require('fs');  // ExistsSync var to check if font directory patch exist
-var bootstrapExist     = false;
 
 var webpack =  require('gulp-webpack');
 var webpackConfig = require('./webpack.config');
+
+var myJsFiles          = ['js/*.js'];    // Holds the js files to be concatenated
 
 var onError = function(err) {
     notify.onError({
