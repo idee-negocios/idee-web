@@ -1,7 +1,5 @@
-import { hello } from './asd';
-console.log(hello);
+import { asd } from './func';
 
-// const hello = msg => `${msg}!`;
-// console.log(hello('Hello'));
-
-// $(() => console.log('hola'));
+(() => {
+  console.log(asd('!'));
+})();
