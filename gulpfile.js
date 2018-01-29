@@ -80,12 +80,17 @@ gulp.task('images', function() {
   .pipe(gulp.dest('build/img/'));
 });
 
+gulp.task('fonts', function() {
+  gulp.src('fonts/**/*')
+    .pipe(gulp.dest('build/fonts/'));
+});
+
 gulp.task('default', function() {
   console.log("Use 'gulp setup' command to initialize the project files");
 });
 
 gulp.task('setup', function() {
-  gulp.start('styles', 'templates', 'scripts', 'images');
+  gulp.start('styles', 'templates', 'scripts', 'images', 'fonts');
 });
 
 gulp.task('watch', ['setup'], function() {
