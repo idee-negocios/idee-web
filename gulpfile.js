@@ -25,7 +25,7 @@ var onError = function(err) {
       title:    "Gulp error in " + err.plugin,
       message:  err.toString()
     })(err);
-    beeper(3);
+    beeper(0);
     this.emit('end');
     gutil.log(gutil.colors.red(err));
 };
@@ -71,11 +71,11 @@ gulp.task('scripts', function(callback) {
 
 gulp.task('images', function() {
   gulp.src('img/**/*')
-  .pipe(cache(imagemin({
-    optimizationLevel: 3,
-    progressive: true,
-    interlaced: true
-  })))
+  // .pipe(cache(imagemin({
+    // optimizationLevel: 3,
+    // progressive: true,
+    // interlaced: true
+  // })))
   .pipe(gulp.dest('build/img/'));
 });
 

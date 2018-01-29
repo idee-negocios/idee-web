@@ -1,13 +1,19 @@
 extends ../templates/main.pug
 
 block title
-  | Title
+  | IDEE
 
 block content
-  .container
-    .card
-      .card-header IDEE Negocios
-      .card-body
-        p.m-0.content Content
-        p.custom Hello
-
+  header.header
+    include ../templates/block-navbar.pug
+  section.galeria.no-padding
+    .jk-container.slider-container.s-main-center.s-cross-center.no-padding.full
+      .slider.s-95.m-70
+        img.slide(src="img/slider-home1.png", alt="")
+        img.slide(src="img/slider-home2.png", alt="")
+        img.slide(src="img/slider-home3.png", alt="")
+        img.slide(src="img/slider-home4.png", alt="")
+        img.slide(src="img/slider-home5.png", alt="")
+        img.slide(src="img/slider-home6.png", alt="")
+      span.icon-circle-left.slidesjs-previous.slidesjs-navigation
+      span.icon-play.slidesjs-next.slidesjs-navigation
