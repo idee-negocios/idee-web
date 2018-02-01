@@ -4,16 +4,260 @@ block title
   | IDEE
 
 block content
-  header.header
+  header
     include ../templates/block-navbar.pug
-  section.galeria.no-padding
-    .jk-container.slider-container.s-main-center.s-cross-center.no-padding.full
-      .slider.s-95.m-70
-        img.slide(src="img/slider-home1.png", alt="")
-        img.slide(src="img/slider-home2.png", alt="")
-        img.slide(src="img/slider-home3.png", alt="")
-        img.slide(src="img/slider-home4.png", alt="")
-        img.slide(src="img/slider-home5.png", alt="")
-        img.slide(src="img/slider-home6.png", alt="")
-      span.icon-circle-left.slidesjs-previous.slidesjs-navigation
-      span.icon-play.slidesjs-next.slidesjs-navigation
+    section.galeria.no-padding
+      #galeria.jk-container.slider-container.s-main-center.s-cross-center.no-padding.full
+        .slider.s-95.m-70
+          img.slide(src="img/slider-home1.png", alt="")
+          img.slide(src="img/slider-home2.png", alt="")
+          img.slide(src="img/slider-home3.png", alt="")
+          img.slide(src="img/slider-home4.png", alt="")
+          img.slide(src="img/slider-home5.png", alt="")
+          img.slide(src="img/slider-home6.png", alt="")
+        //- span.icon-circle-left.slidesjs-previous.slidesjs-navigation
+        //- span.icon-play.slidesjs-next.slidesjs-navigation  
+  main
+    section.cliente-container
+      .jk-container.cliente.s-main-center.full
+        .jk-item.title.s-100.s-main-center
+          h1 OFRECEMOS RESULTADOS SORPRENDENTES A TRAVÉS DE UN MARKETING <br class="m-hide s-hide"> DIGITAL PURAMENTE ESTRATÉGICO Y PERSONALIZADO A CADA NECESIDAD.
+        .jk-item.s-100.m-50.no-padding.box#divEmpresa
+          img(src="img/home-cliente1.png", alt="")
+          h3#empresa SOY EMPRESA
+        .jk-item.s-100.m-50.no-padding.box#divEmprendedor
+          img(src="img/home-cliente2.png", alt="")
+          h3#emprendedor SOY EMPRENDEDOR
+    
+    section.pedi-presupuesto-container
+      .jk-container.pedi-presupuesto.s-main-center
+        h2.jk-item.s-100 PEDÍ TU PRESUPUESTO
+        p.jk-item.s-100 PRESUPUESTAMOS GRATIS DE ACUERDO A TU NECESIDAD
+        .jk-item.s-100
+          button ¡QUIERO MI PRESUPUESTO GRATIS!
+    
+    section.agencia-marketing-container
+      .jk-container.agencia-marketing.s-main-center
+        h2.jk-items.s-100.m-75.l-55 ESTAMOS LISTOS PARA SER TU AGENCIA DE MARKETING
+        p.jk-items.s-100 TERCERIZÁ TU DEPARTAMENTO ÍNTEGRO DE MARKETING APROVECHANDO <br class="m-hide s-hide"> LOS MEDIOS DIGITALES Y JUNTOS POSICIONAMOS TU MARCA DE MANERA <br class="m-hide s-hide"> CREATIVA. DEJÁ TODO EN NUESTRAS MANOS, TENÉS A TU DISPOSICIÓN UN <br class="m-hide s-hide"> EQUIPO DE PROFESIONALES EXPERTOS FULL TIME. VAS A SENTIR QUE <br class="m-hide s-hide"> NUESTRA OFICINA ESTÁ AL LADO DE LA TUYA.<br> <span>SÉ PARTE DE IDEE Y CREZCAMOS JUNTOS.</span>
+
+    #que-hacemos
+    section.que-hacemos-container.s-hide
+      .jk-container.que-hacemos.full.s-main-space-around
+        .jk-item.que-hacemos-title.s-100
+          h2 ¿QUÉ HACEMOS?
+        .jk-item.jk-container.box.l-25.m-33.s-90.s-main-center.s-cross-start
+          .jk-item.img.s-100.s-main-center
+            img(src="img/home-que-hacemos1.png", alt="marketing")
+          .jk-item.title.s-100.s-main-center
+            h3 MARKETING
+          .jk-item.description.s-100.s-main-center
+            p DISEÑAMOS, PLANIFICAMOS, EJECUTAMOS Y OPTIMIZAMOS ESTRATEGIAS DE MARKETING Y MARKETING DIGITAL OMNICANALES QUE ASEGURAN UNA COMUNICACIÓN EFECTIVA . ¿TUS CLIENTES HABLAN DE VOS?
+        .jk-item.jk-container.box.l-25.m-33.s-90.s-main-center.s-cross-start
+          .jk-item.img.s-100.s-main-center
+            img(src="img/home-que-hacemos2.png", alt="diseño")
+          .jk-item.title.s-100.s-main-center
+            h3 DISEÑO
+          .jk-item.description.s-100.s-main-center
+            p LA PRIMERA IMPRESIÓN ES FUNDAMENTAL, Y REPRESENTA EL 60% DE LA DECISIÓN DE COMPRA, POR ESO NUESTRO EQUIPO DESARROLLA TU IDENTIDAD CORPORATIVA PARA POSICIONARTE EN EL MERCADO. ¿ESTÁS DANDO UNA BUENA PRIMERA IMPRESIÓN?
+        .jk-item.jk-container.box.l-25.m-33.s-90.s-main-center.s-cross-start
+          .jk-item.img.s-100.s-main-center
+            img(src="img/home-que-hacemos3.png", alt="desarollo web")
+          .jk-item.title.s-100.s-main-center
+            h3 DESARROLLO WEB
+          .jk-item.description.s-100.s-main-center
+            p TU PÁGINA WEB ES TU VENTANA AL MUNDO. NUESTROS DESARROLLADORES Y DISEÑADORES CREAN TU SITIO WEB QUE ASEGURAN LA MEJOR EXPERIENCIA DE USUARIO DESDE CUALQUIER DISPOSITIVO. ¿TODAVÍA SIN WEB?
+      .jk-container.que-hacemos.full.s-main-space-around  
+        .jk-item.jk-container.box.l-25.m-33.s-90.s-main-center.s-cross-start
+          .jk-item.img.s-100.s-main-center
+            img(src="img/home-que-hacemos4.png", alt="sistemas")
+          .jk-item.title.s-100.s-main-center
+            h3 SISTEMAS
+          .jk-item.description.s-100.s-main-center
+            p CREAMOS SISTEMAS PERSONALIZADOS E INTUITIVOS QUE SE AJUSTAN A TU NECESIDAD PERFECCIONANDO TUS PROCESOS INTERNOS, YA SEAN SISTEMAS DE GESTIÓN DE STOCK, E-COMMERCE, SISTEMAS CONTABLES, DE RESERVAS Y COMANDAS O SISTEMAS PERSONALIZADOS. ¿QUÉ SISTEMA NECESITÁS?
+        .jk-item.jk-container.box.l-25.m-33.s-90.s-main-center.s-cross-start
+          .jk-item.img.s-100.s-main-center
+            img(src="img/home-que-hacemos5.png", alt="social media")
+          .jk-item.title.s-100.s-main-center
+            h3 SOCIAL MEDIA
+          .jk-item.description.s-100.s-main-center
+            p LAS REDES SOCIALES TE PERMITEN COMUNICARTE CON TUS CLIENTES Y POTENCIALES CLIENTES, POSICIONANDO TU MARCA. ¿INTERACTÚAS CON TUS CLIENTES?
+        .jk-item.jk-container.box.l-25.m-33.s-90.s-main-center.s-cross-start
+          .jk-item.img.s-100.s-main-center
+            img(src="img/home-que-hacemos6.png", alt="publicidad")
+          .jk-item.title.s-100.s-main-center
+            h3 PUBLICIDAD
+          .jk-item.description.s-100.s-main-center
+            p HACÉ QUE TUS CLIENTES TE ENCUENTREN PRIMERO. ONFIGURAMOS, MONITOREAMOS Y OPTIMIZAMOS TUS CAMPAÑAS EN ADWORDS (GOOGLE, YOUTUBE, APPS) Y REDES SOCIALES ( FACEBOOK, INSTAGRAM, TWITTER). ¿ESTÁS PRESENTE EN GOOGLE?
+    
+    section.que-hacemos-container.m-hide.l-hide
+      .que-hacemos.s-main-center 
+        .jk-item.que-hacemos-title.no-padding
+          h2 ¿QUÉ HACEMOS?
+      .que-hacemos-slider.que-hacemos.jk-container
+        .jk-item.jk-container.box.slide.s-main-center.s-cross-start
+          .jk-item.img.s-100.s-main-center
+            img(src="img/home-que-hacemos1.png", alt="marketing")
+          .jk-item.title.s-100.s-main-center
+            h3 MARKETING
+          .jk-item.description.s-100.s-main-center
+            p DISEÑAMOS, PLANIFICAMOS, EJECUTAMOS Y OPTIMIZAMOS ESTRATEGIAS DE MARKETING Y MARKETING DIGITAL OMNICANALES QUE ASEGURAN UNA COMUNICACIÓN EFECTIVA . ¿TUS CLIENTES HABLAN DE VOS?
+        .jk-item.jk-container.box.slide.s-main-center.s-cross-start
+          .jk-item.img.s-100.s-main-center
+            img(src="img/home-que-hacemos2.png", alt="diseño")
+          .jk-item.title.s-100.s-main-center
+            h3 DISEÑO
+          .jk-item.description.s-100.s-main-center
+            p LA PRIMERA IMPRESIÓN ES FUNDAMENTAL, Y REPRESENTA EL 60% DE LA DECISIÓN DE COMPRA, POR ESO NUESTRO EQUIPO DESARROLLA TU IDENTIDAD CORPORATIVA PARA POSICIONARTE EN EL MERCADO. ¿ESTÁS DANDO UNA BUENA PRIMERA IMPRESIÓN?
+        .jk-item.jk-container.box.slide.s-main-center.s-cross-start
+          .jk-item.img.s-100.s-main-center
+            img(src="img/home-que-hacemos3.png", alt="desarollo web")
+          .jk-item.title.s-100.s-main-center
+            h3 DESARROLLO WEB
+          .jk-item.description.s-100.s-main-center
+            p TU PÁGINA WEB ES TU VENTANA AL MUNDO. NUESTROS DESARROLLADORES Y DISEÑADORES CREAN TU SITIO WEB QUE ASEGURAN LA MEJOR EXPERIENCIA DE USUARIO DESDE CUALQUIER DISPOSITIVO. ¿TODAVÍA SIN WEB? 
+        .jk-item.jk-container.box.slide.s-main-center.s-cross-start
+          .jk-item.img.s-100.s-main-center
+            img(src="img/home-que-hacemos4.png", alt="sistemas")
+          .jk-item.title.s-100.s-main-center
+            h3 SISTEMAS
+          .jk-item.description.s-100.s-main-center
+            p CREAMOS SISTEMAS PERSONALIZADOS E INTUITIVOS QUE SE AJUSTAN A TU NECESIDAD PERFECCIONANDO TUS PROCESOS INTERNOS, YA SEAN SISTEMAS DE GESTIÓN DE STOCK, E-COMMERCE, SISTEMAS CONTABLES, DE RESERVAS Y COMANDAS O SISTEMAS PERSONALIZADOS. ¿QUÉ SISTEMA NECESITÁS?
+        .jk-item.jk-container.box.slide.s-main-center.s-cross-start
+          .jk-item.img.s-100.s-main-center
+            img(src="img/home-que-hacemos5.png", alt="social media")
+          .jk-item.title.s-100.s-main-center
+            h3 SOCIAL MEDIA
+          .jk-item.description.s-100.s-main-center
+            p LAS REDES SOCIALES TE PERMITEN COMUNICARTE CON TUS CLIENTES Y POTENCIALES CLIENTES, POSICIONANDO TU MARCA. ¿INTERACTÚAS CON TUS CLIENTES?
+        .jk-item.jk-container.box.slide.s-main-center.s-cross-start
+          .jk-item.img.s-100.s-main-center
+            img(src="img/home-que-hacemos6.png", alt="publicidad")
+          .jk-item.title.s-100.s-main-center
+            h3 PUBLICIDAD
+          .jk-item.description.s-100.s-main-center
+            p HACÉ QUE TUS CLIENTES TE ENCUENTREN PRIMERO. ONFIGURAMOS, MONITOREAMOS Y OPTIMIZAMOS TUS CAMPAÑAS EN ADWORDS (GOOGLE, YOUTUBE, APPS) Y REDES SOCIALES ( FACEBOOK, INSTAGRAM, TWITTER). ¿ESTÁS PRESENTE EN GOOGLE?
+    
+    #como-hacemos
+    section.como-hacemos-container.s-hide
+      .jk-container.como-hacemos.s-main-space-around.full
+        .jk-item.como-hacemos-title.s-100
+          h2 ¿CÓMO HACEMOS?
+        .jk-item.jk-container.box.s-main-center.s-cross-start.l-10.m-30
+          .jk-item.number.s-100.s-main-center
+            p 1
+          .jk-item.title.s-100.s-main-center
+            h3 INVESTIGACIÓN
+          .jk-item.description.s-100.s-main-center
+            p REALIZAMOS ANÁLISIS DE MERCADO PARA CONOCER EN DETALLE A QUE NOS ENFRENTAMOS.
+        .jk-item.img
+          img(src="img/home-como-hacemos-separator.png", alt="")
+        .jk-item.jk-container.box.s-main-center.s-cross-start.l-10.m-30
+          .jk-item.number.s-100.s-main-center
+            p 2
+          .jk-item.title.s-100.s-main-center
+            h3 PLANIFICACIÓN
+          .jk-item.description.s-100.s-main-center
+            p DEFINIMOS PLANES DE MARKETING ESTRATÉGICOS FUNDAMENTADOS Y OBJETIVOS ESPECIFICOS
+        .jk-item.img
+          img(src="img/home-como-hacemos-separator.png", alt="")
+        .jk-item.jk-container.box.s-main-center.s-cross-start.l-10.m-30
+          .jk-item.number.s-100.s-main-center
+            p 3
+          .jk-item.title.s-100.s-main-center
+            h3 DISEÑO
+          .jk-item.description.s-100.s-main-center
+            p PLASMAMOS EL CONCEPTO EN LA COMUNICACIÓN Y EL DISEÑO
+        .jk-item.img
+          img(src="img/home-como-hacemos-separator.png", alt="")
+        .jk-item.jk-container.box.s-main-center.s-cross-start.l-10.m-30
+          .jk-item.number.s-100.s-main-center
+            p 4
+          .jk-item.title.s-100.s-main-center
+            h3 DESAROLLO
+          .jk-item.description.s-100.s-main-center
+            p SE COMIENZA A EJECUTAR LA PLANIFICACION ESTRATÉGICA.
+        .jk-item.img
+          img(src="img/home-como-hacemos-separator.png", alt="")
+        .jk-item.jk-container.box.s-main-center.s-cross-start.l-10.m-30
+          .jk-item.number.s-100.s-main-center
+            p 5
+          .jk-item.title.s-100.s-main-center
+            h3 MONITORIZACIÓN
+          .jk-item.description.s-100.s-main-center
+            p SE COMIENZA A MONITOREAR Y ANALIZAR VARIABLES ESPECIFICAS
+        .jk-item.img
+          img(src="img/home-como-hacemos-separator.png", alt="")
+        .jk-item.jk-container.box.s-main-center.s-cross-start.l-10.m-30
+          .jk-item.number.s-100.s-main-center
+            p 6
+          .jk-item.title.s-100.s-main-center
+            h3 OPTIMIZACIÓN
+          .jk-item.description.s-100.s-main-center
+            p OPTIMIZAMOS LA ESTRATEGIA EN FUNCIÓN DE LOS RESULTADOS
+
+    section.como-hacemos-container.m-hide.l-hide
+      .jk-container.como-hacemos.s-main-center
+        .jk-item.como-hacemos-title.s-100.no-padding
+          h2 ¿CÓMO HACEMOS?
+      .jk-container.como-hacemos.como-hacemos-slider.s-main-center
+        .jk-item.jk-container.box.slide.s-main-center.s-cross-start.l-10.m-30.s-90
+          .jk-item.number.s-100.s-main-center
+            p 1
+          .jk-item.title.s-100.s-main-center
+            h3 INVESTIGACIÓN
+          .jk-item.description.s-100.s-main-center
+            p REALIZAMOS ANÁLISIS DE MERCADO PARA CONOCER EN DETALLE A QUE NOS ENFRENTAMOS.
+        .jk-item.jk-container.box.slide.s-main-center.s-cross-start.l-10.m-30.s-90
+          .jk-item.number.s-100.s-main-center
+            p 2
+          .jk-item.title.s-100.s-main-center
+            h3 PLANIFICACIÓN
+          .jk-item.description.s-100.s-main-center
+            p DEFINIMOS PLANES DE MARKETING ESTRATÉGICOS FUNDAMENTADOS Y OBJETIVOS ESPECIFICOS
+        .jk-item.jk-container.box.slide.s-main-center.s-cross-start.l-10.m-30.s-90
+          .jk-item.number.s-100.s-main-center
+            p 3
+          .jk-item.title.s-100.s-main-center
+            h3 DISEÑO
+          .jk-item.description.s-100.s-main-center
+            p PLASMAMOS EL CONCEPTO EN LA COMUNICACIÓN Y EL DISEÑO
+        .jk-item.jk-container.box.slide.s-main-center.s-cross-start.l-10.m-30.s-90
+          .jk-item.number.s-100.s-main-center
+            p 4
+          .jk-item.title.s-100.s-main-center
+            h3 DESAROLLO
+          .jk-item.description.s-100.s-main-center
+            p SE COMIENZA A EJECUTAR LA PLANIFICACION ESTRATÉGICA.
+        .jk-item.jk-container.box.slide.s-main-center.s-cross-start.l-10.m-30.s-90
+          .jk-item.number.s-100.s-main-center
+            p 5
+          .jk-item.title.s-100.s-main-center
+            h3 MONITORIZACIÓN
+          .jk-item.description.s-100.s-main-center
+            p SE COMIENZA A MONITOREAR Y ANALIZAR VARIABLES ESPECIFICAS
+        .jk-item.jk-container.box.slide.s-main-center.s-cross-start.l-10.m-30.s-90
+          .jk-item.number.s-100.s-main-center
+            p 6
+          .jk-item.title.s-100.s-main-center
+            h3 OPTIMIZACIÓN
+          .jk-item.description.s-100.s-main-center
+            p OPTIMIZAMOS LA ESTRATEGIA EN FUNCIÓN DE LOS RESULTADOS
+    
+    section.proyectos-container
+      .proyectos.jk-container.full
+        .jk-item.proyectos-title.s-100
+          h2 NUESTROS PROYECTOS
+        .jk-item.text.s-100
+          p "LA INNOVACIÓN CONSTANTE ES LA ÚNICA FORMA DE MANTENERSE <br> COMPETITIVO, PORQUE NINGUNA VENTAJA ES SOSTENIBLE A LARGO PLAZO" <br> -JOSÉ GONZALEZ MOORE-
+    
+    #contacto
+    section.contactanos-container
+      .contactanos.jk-container.full
+        .jk-item.contactanos-title.s-100
+          h2 CONTACTANOS
+        .jk-item.text.s-100
+          p IDENEGOCIOS@GMAIL.COM
+          P (261) 307 2398
+
+  include ../templates/block-footer.pug

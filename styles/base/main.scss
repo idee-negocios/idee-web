@@ -1,0 +1,17 @@
+@import 'jk.scss'; //contiene framework JK y fuentes descargadas
+@import 'reset/reset.scss'; //resetea todos los estilos
+@import 'icomoon/icomoon.scss'; //fuentes de iconos
+
+// scss globales
+@import 'navbar.scss';
+@import 'footer.scss';
+
+// FUENTES DISPONIBLES: 'BebasNeue', 'Open Sans Condensed'
+
+// Estilos globales
+section{
+    margin:10px 0;
+    @media screen and (min-width:getBreakpoint(m) ){
+        margin: 40px 0;
+    }
+}
