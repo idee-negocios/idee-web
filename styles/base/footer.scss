@@ -1,17 +1,39 @@
 .footer{
-    height: 140px;
+    min-height: 70px;
     background-color: getColor(red,6);
-    padding:15px;
+    padding: 10px 15px;
+    flex-wrap: nowrap;
+    @media screen and (min-width: getBreakpoint(m)) {
+        
+        min-height: 140px;
+        padding:15px 30px;
+    }
+    .footer-logo{
+        width: 100px;
+        padding:0;
+        @media screen and (min-width: getBreakpoint(m)) {
+            width:300px;
+        }
+        img{
+            margin:0;
+        }
+    }
     .footer-social{
+        padding:0;
         .footer-icon{
-            padding:8px;
+            padding:0px;
             a[class *= "icon"]{
-                font-size: 30px;
                 color: getColor(red,6);
-                padding: 15px;
                 background-color: white;
                 border-radius: 50%;
-                margin:0;
+                margin:5px;
+                font-size: 20px;
+                padding: 10px;
+                
+                @media screen and (min-width: getBreakpoint(m)) {
+                    font-size: 30px;
+                    padding: 15px;
+                }
             } 
             .icon-facebook{
                 

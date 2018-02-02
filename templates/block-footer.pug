@@ -1,8 +1,11 @@
 footer
     .footer.jk-container.full.s-main-space-between.s-cross-center
-        .jk-item.footer-logo.s-50
-            //- img(src="", alt="")
-        .jk-item.jk-container.footer-social.s-50.s-main-end.s-cross-center
+        .jk-item.footer-logo.s-40.m-50.s-cross-center
+            picture
+                source(media="(min-width: 600px )", srcset="img/logo-footer.png")
+                source(srcset="img/logo-footer2.png")
+                img(srcset="img/logo-footer2.png", alt="idee footer")
+        .jk-item.jk-container.footer-social.s-60.m-50.s-main-end.s-cross-center
             .jk-item.footer-icon
                 a(href="").icon-facebook
             .jk-item.footer-icon

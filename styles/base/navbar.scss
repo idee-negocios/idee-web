@@ -10,15 +10,17 @@
   transition: .7s;
   z-index: 10;
   width: 100%;
-  padding: 10px;
+  padding: 5px 10px;  
   top: 0;
   min-height: 50px;
   position: fixed;
   background-color: getColor(white, 0);
   @media screen and (min-width: getBreakpoint(m)) {
     opacity: .6;
+    padding: 10px;
   }
   @media screen and (min-width: getBreakpoint(l)) {
+    padding: 10px 30px;
     min-height: 70px;
   }
   ul {
@@ -63,6 +65,10 @@
   }
   .navbar-logo {
     z-index: 10;
+    width: 140px;
+    @media screen and (min-width: getBreakpoint(m)) {
+      width: 260px;
+    }
   }
 }
 
@@ -148,8 +154,8 @@
   }
   .navbar-aside-logo {
     img {
-      padding: 0 15px;
-      max-width: 50px;
+      padding: 5px 15px;
+      max-width: 200px;
     }
   }
   .navbar-list-divider {

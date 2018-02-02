@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - "8"
+
+sudo: false
+
+branches:
+  only:
+    - master
+
+before_install:
+  - npm install -g surge
+
+script:
+  - echo "Subiendo..."
+
+after_success:
+  - ls -l
+  - surge -p ./build --domain idee-web.surge.sh
