@@ -52,12 +52,12 @@ require('./slides.min');
   //funcion para tipoCliente
   function empresaControl(){
     $("#divEmpresa").hover(function(){
-      $("#empresa").html("¡CRESCAMOS!");
+      $("#empresa").html("¡CREZCAMOS!");
     },function(){
       $("#empresa").html("SOY EMPRESA");
     });
     $("#divEmprendedor").hover(function(){
-      $("#emprendedor").html("¡CRESCAMOS!");
+      $("#emprendedor").html("¡CREZCAMOS!");
     },function(){
       $("#emprendedor").html("SOY EMPRENDEDOR");
     });
