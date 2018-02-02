@@ -16,4 +16,4 @@ script:
 
 after_success:
   - ls -l
-  - surge -p ./build --domain idee-web.surge.sh
+  - surge -p ./build --domain dev.ideenegocios.com.ar
