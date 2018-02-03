@@ -22,6 +22,11 @@ $slider-pagination-circle: true;
 }
 
 .slidesjs-navigation {
+	border-top: 4px solid getColor(white,0);
+	border-left: 4px solid getColor(white,0);
+	// transform: rotate(-45deg) translateY(-50%);
+	height: 2px;
+	width: 2px;
 	margin:3px;
 	position: absolute;
 	font-size:26px;
@@ -32,14 +37,35 @@ $slider-pagination-circle: true;
 	color: white;
 	top:50%;
 	cursor: pointer;
-	padding:15px;
-	transform: translateY(-50%);
+	padding: 5px;
+	@media screen and (min-width:getBreakpoint(m) ){
+		padding:6px;
+	}
+	@media screen and (min-width:getBreakpoint(l) ){
+		padding:7px;
+	}
 }
 .slidesjs-previous{
+	transform: translateY(-50%) rotate(-45deg);
+	margin-left: 20px;
 	left: 0px;
+	@media screen and (min-width:getBreakpoint(m) ){
+		margin-left: 25px;
+	}
+	@media screen and (min-width:getBreakpoint(l) ){
+		margin-left: 30px;
+	}
 }
 .slidesjs-next{
+	transform: translateY(-50%) rotate(135deg);
+	margin-right: 20px;
 	right: 0px;
+	@media screen and (min-width:getBreakpoint(m) ){
+		margin-right: 25px;
+	}
+	@media screen and (min-width:getBreakpoint(l) ){
+		margin-right: 30px;
+	}
 }
 .slidesjs-stop, .slidesjs-play{
 	top:10%;
@@ -135,7 +161,8 @@ $slider-pagination-circle: true;
 .como-hacemos-slider{
 	height: 200px;
 	.slidesjs-navigation {
-		color:black;
+		border-top: 4px solid getColor(black,0);
+		border-left: 4px solid getColor(black,0);
 		top:40%;
 		opacity: .7;
 	}
