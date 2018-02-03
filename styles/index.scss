@@ -8,14 +8,76 @@
         top:-80px;
     
     }
-
 }
+
+
 //SECTION: galeria
 .galeria{
     margin-top:50px;
     @media screen and (min-width:getBreakpoint(m) ){
         margin-top: 0;
     
+    }
+    .slider{
+        // position: relative;
+        img{
+
+        }
+        .text{
+            position: absolute;
+            top:5%;
+            left: 5%;
+            @media screen and (min-width:getBreakpoint(m) ){
+                top:25%;
+                
+                
+            }
+            @media screen and (min-width: 1200px ){
+                top: 35%;
+            }
+        }
+        h2{
+            font-family: 'bebasNeue';
+            letter-spacing: 1px;
+            font-weight: 100;
+            color: white;
+            background-color: getColor(red,7);
+            padding: 1px 10px;
+            font-size: 16px;
+            margin: 5px 0;
+            display: inline-block;
+            @media screen and (min-width:getBreakpoint(m) ){
+                letter-spacing: 2px;
+                font-size:  26px;
+    
+                
+                
+            }
+            @media screen and (min-width:getBreakpoint(l) ){
+                font-size: 30px;
+                margin:  15px 0;
+            }
+        }
+        p{
+            font-family: 'bebasNeue';
+            // letter-spacing: 0px;
+            font-weight: 100;
+            color: white;
+            padding: 0px;
+            margin: 0px 0;
+            font-size: 24px;
+            line-height: 26px;
+            top:15%;
+            left: 5%;
+            @media screen and (min-width:getBreakpoint(m) ){
+                font-size:  40px;
+                line-height: 44px;
+            }
+            @media screen and (min-width:getBreakpoint(l) ){
+                font-size: 70px;
+                line-height: 73px;
+            }
+        }
     }
 }
 
@@ -241,7 +303,7 @@
         .description{
             font-size: 16px;
             text-align: center;
-            padding: 0 40px;
+            padding: 0 50px;
             @media screen and (min-width:getBreakpoint(l) ){
                 font-size:18px;
             }

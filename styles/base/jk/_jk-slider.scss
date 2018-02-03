@@ -127,18 +127,17 @@ $slider-pagination-circle: true;
 
 .que-hacemos-slider{
 	height: 260px;
+	.slidesjs-navigation {
+		opacity: .7;
+		// top:40%;
+	}
 }
 .como-hacemos-slider{
-	height: 260px;
+	height: 200px;
 	.slidesjs-navigation {
 		color:black;
 		top:40%;
-	}
-	&:hover{
-		.slidesjs-navigation{
-			opacity: .7;
-			transition: .5s;
-		}
+		opacity: .7;
 	}
 }
 
