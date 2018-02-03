@@ -1,34 +1,33 @@
 import $ from 'jquery';
+import * as Navbar from './navbar';
 
 window.$ = $;
 window.jQuery = $;
 
 require('./slides.min');
-require('./navbar');
 
 (function(){
-  
-
   $('.slider').slidesjs({
     play: {
-    active: false,
-    effect: "fade", //fade or slide
-    interval: 4000,
-    auto: true,
-    swap: true,
-    pauseOnHover: false,
-    restartDelay: 2500
+      active: false,
+      effect: "fade", //fade or slide
+      interval: 4000,
+      auto: true,
+      swap: true,
+      pauseOnHover: true,
+      restartDelay: 2500
     }
   });
+
   $('.que-hacemos-slider').slidesjs({
     play: {
-    active: false,
-    effect: "slide", //fade or slide
-    interval: 4000,
-    auto: false,
-    swap: false,
-    pauseOnHover: false,
-    restartDelay: 2500
+      active: false,
+      effect: "slide", //fade or slide
+      interval: 4000,
+      auto: false,
+      swap: false,
+      pauseOnHover: false,
+      restartDelay: 2500
     },
     pagination: {
       active: false,
@@ -37,12 +36,12 @@ require('./navbar');
 
   $('.como-hacemos-slider').slidesjs({
     play: {
-    active: false,
-    effect: "slide", //fade or slide
-    auto: false,
-    swap: false,
-    pauseOnHover: false,
-    restartDelay: 2500
+      active: false,
+      effect: "slide", //fade or slide
+      auto: false,
+      swap: false,
+      pauseOnHover: false,
+      restartDelay: 2500
     },
     pagination: {
       active: false,
@@ -53,12 +52,12 @@ require('./navbar');
   //funcion para tipoCliente
   function empresaControl(){
     $("#divEmpresa").hover(function(){
-      $("#empresa").html("¡CRESCAMOS!");
+      $("#empresa").html("¡CREZCAMOS!");
     },function(){
       $("#empresa").html("SOY EMPRESA");
     });
     $("#divEmprendedor").hover(function(){
-      $("#emprendedor").html("¡CRESCAMOS!");
+      $("#emprendedor").html("¡CREZCAMOS!");
     },function(){
       $("#emprendedor").html("SOY EMPRENDEDOR");
     });
