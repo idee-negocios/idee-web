@@ -50,18 +50,82 @@ require('./slides.min');
 
 
   //funcion para tipoCliente
+  let empresaActive = false;
+  let emprendedorActive = false;
+
   function empresaControl(){
-    $("#divEmpresa").hover(function(){
-      $("#empresa").html("¡CREZCAMOS!");
-    },function(){
-      $("#empresa").html("SOY EMPRESA");
-    });
-    $("#divEmprendedor").hover(function(){
-      $("#emprendedor").html("¡CREZCAMOS!");
-    },function(){
-      $("#emprendedor").html("SOY EMPRENDEDOR");
-    });
+
+    if(empresaActive == false){
+      document.getElementById("divEmpresa").classList.remove("box-active");
+      $("#divEmpresa").hover(function(){
+        $("#empresa").html("¡CREZCAMOS!");
+      },function(){
+        $("#empresa").html("SOY EMPRESA");
+      });
+      
+    } else{
+      document.getElementById("divEmpresa").classList.add("box-active");
+      $("#divEmpresa").hover(function(){
+        $("#empresa").html("¡CREZCAMOS!");
+      },function(){
+        $("#empresa").html("¡CREZCAMOS!");
+      });
+      
+     
+    };
+    if (emprendedorActive == false ){
+      document.getElementById("divEmprendedor").classList.remove("box-active");
+      $("#divEmprendedor").hover(function(){
+        $("#emprendedor").html("¡EMPRENDAMOS!");
+      },function(){
+        $("#emprendedor").html("SOY EMPRENDEDOR");
+      });
+
+    
+
+    }else{
+      document.getElementById("divEmprendedor").classList.add("box-active");
+      $("#divEmprendedor").hover(function(){
+        $("#emprendedor").html("¡EMPRENDAMOS!");
+      },function(){
+        $("#emprendedor").html("¡EMPRENDAMOS!");
+      });
+
+     
+    };
   }
+
+  //funciones para mostrar tipoClienteDescription
+$(document).ready(function(){
+
+  $("#divEmpresa").on( "click", function() {	 
+    empresaActive = (!empresaActive); 
+    emprendedorActive = false;
+    empresaControl();
+    $('#clienteDescriptionEmpresa').toggle("slow");
+    $("#empresa").html("¡CREZCAMOS!");
+    $("#emprendedor").html("SOY EMPRENDEDOR");
+
+    if($('#clienteDescriptionEmprendedor').show()){
+      $('#clienteDescriptionEmprendedor').hide();
+    }
+  });
+
+  $("#divEmprendedor").on( "click", function() {	 
+    emprendedorActive = (!emprendedorActive);
+    empresaActive = false;
+    empresaControl();
+    $('#clienteDescriptionEmprendedor').toggle("slow");
+    $("#emprendedor").html("¡EMPRENDAMOS!");
+    $("#empresa").html("TENGO UNA EMPRESA");
+
+    if($('#clienteDescriptionEmpresa').show()){
+      $('#clienteDescriptionEmpresa').hide();
+    }
+  });
+});
+
+
 
   // //funcion cargar imagenes de slider
   // function cargarSlider(){
