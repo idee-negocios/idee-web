@@ -11,9 +11,6 @@ branches:
   only:
     - master
 
-before_install:
-  - npm install -g surge
-
 install:
   - npm install
 
@@ -24,4 +21,4 @@ script:
 
 after_success:
   - ls -l ./build
-  - surge -p ./build --domain ideenegocios.com.ar
+  - npm run deploy
