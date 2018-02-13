@@ -4,6 +4,9 @@ node_js:
 
 sudo: false
 
+env:
+  - NODE_ENV=production
+
 branches:
   only:
     - master
