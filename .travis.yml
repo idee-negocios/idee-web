@@ -19,6 +19,7 @@ install:
 
 script:
   - echo "Building..."
+  - ls -l .
   - npm run build
 
 after_success:
