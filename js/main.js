@@ -60,7 +60,7 @@ require('./slides.min');
       $("#divEmpresa").hover(function(){
         $("#empresa").html("¡CREZCAMOS!");
       },function(){
-        $("#empresa").html("SOY EMPRESA");
+        $("#empresa").html("TENGO UNA EMPRESA");
       });
       
     } else{

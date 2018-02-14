@@ -93,17 +93,28 @@
         padding: 0px;
         margin: 0px;
         font-size: 18px;
-        h1{
-            font-size: 18px;
-            margin: 5px 15px 15px;
             @media screen and (min-width:getBreakpoint(m) ){
-                font-size: 20px;           
+       
                 margin: 0px 10px 40px
                 
             }
             @media screen and (min-width:getBreakpoint(l) ){
                 font-size: 22px;
                 margin: 20px 0 60px;
+            }
+        
+        h1,h2{
+            font-size: 18px;
+            margin: 0;
+            padding: 0;
+            @media screen and (min-width:getBreakpoint(m) ){
+                font-size: 20px;           
+                
+                
+            }
+            @media screen and (min-width:getBreakpoint(l) ){
+                font-size: 22px;
+            
             }
         }
     }
@@ -251,7 +262,7 @@
 .agencia-marketing{
     text-align: center;
     font-family: 'open sans condensed';
-    h2{
+    h3{
         font-weight: 100;
         font-size: 37px;
         color: getColor(red,6);
@@ -308,7 +319,7 @@
     }
     .que-hacemos-title{
         text-align: center;
-        h2{ 
+        p{ 
             margin:10px;
             letter-spacing: 1px;
             font-weight: 100;
@@ -381,7 +392,7 @@
     font-family: 'Open Sans Condensed';
     .como-hacemos-title{
         text-align: center;
-        h2{
+        p{
             margin:10px 0 0;
             letter-spacing: 1px;
             font-weight: 100;
@@ -454,7 +465,7 @@
     font-family: 'Open Sans Condensed';
     .proyectos-title{
         text-align: center;
-        h2{
+        p{
             margin:10px 0 0;
             letter-spacing: 1px;
             font-weight: 100;
@@ -470,7 +481,7 @@
         }
     }
     .text{
-        p{
+        cite{
             text-align: center;
             color: getColor(red,6);
             letter-spacing: 1.4px;
@@ -495,7 +506,7 @@
     font-family: 'Open Sans Condensed';
     .contactanos-title{
         text-align: center;
-        h2{
+        p{
             margin:10px 0 0;
             letter-spacing: 1px;
             font-weight: 100;
