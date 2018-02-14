@@ -1,11 +1,8 @@
 language: node_js
 node_js:
-  - "8"
+  - "9.5.0"
 
 sudo: false
-
-env:
-  - NODE_ENV=production
 
 branches:
   only:
@@ -17,7 +14,7 @@ install:
 script:
   - echo "Building..."
   - ls -l .
-  - npm run build
+  - NODE_ENV=production npm run build
 
 after_success:
   - ls -l ./build
