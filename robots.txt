@@ -1,0 +1,5 @@
+Sitemap: https://ideenegocios.com.ar/sitemap.xml
+
+User-agent: *
+Allow: /
+

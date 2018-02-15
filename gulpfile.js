@@ -84,12 +84,22 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest('build/fonts/'));
 });
 
+gulp.task('robots', function() {
+  gulp.src('./robots.txt')
+    .pipe(gulp.dest('build/'));
+});
+
+gulp.task('sitemap', function() {
+  gulp.src('./sitemap.xml')
+    .pipe(gulp.dest('build/'));
+});
+
 gulp.task('default', function() {
   console.log("Use 'gulp setup' command to initialize the project files");
 });
 
 gulp.task('setup', function() {
-  gulp.start('styles', 'templates', 'scripts', 'images', 'fonts');
+  gulp.start('styles', 'templates', 'scripts', 'images', 'fonts', 'robots', 'sitemap');
 });
 
 gulp.task('watch', ['setup'], function() {

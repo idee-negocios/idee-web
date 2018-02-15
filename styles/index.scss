@@ -1,7 +1,7 @@
 @import "./base/main.scss";
 
 //ID PARA LINK
-#que-hacemos,#como-hacemos,#contacto{
+#que-hacemos,#como-hacemos,#contacto,#presupuestador,#nuestros-proyectos{
     position: relative;
     top:-55px;
     @media screen and (min-width:getBreakpoint(m) ){
@@ -434,13 +434,13 @@
             }
         }
         .title{
-            font-size: 14px;
             color:getColor(red,6);
             text-align: center;
             font-family: 'BebasNeue';
             font-weight: 100;
             letter-spacing: 1px;
-            h3{
+            h4{
+                font-size: 1.17em;
                 margin:0;
                 padding: 0 0 10px;
             }
