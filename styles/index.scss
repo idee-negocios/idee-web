@@ -26,7 +26,9 @@
         .text{
             position: absolute;
             top:5%;
-            left: 5%;
+            left: 5%;  
+            text-shadow:getShadow(0);
+
             @media screen and (min-width:getBreakpoint(m) ){
                 top:25%;
                 
