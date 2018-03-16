@@ -60,7 +60,7 @@ require('./slides.min');
       $("#divEmpresa").hover(function(){
         $("#empresa").html("¡CREZCAMOS!");
       },function(){
-        $("#empresa").html("TENGO UNA EMPRESA");
+        $("#empresa").html("TENGO <br class='m-hide l-hide'> UNA EMPRESA");
       });
       
     } else{
@@ -78,7 +78,7 @@ require('./slides.min');
       $("#divEmprendedor").hover(function(){
         $("#emprendedor").html("¡EMPRENDAMOS!");
       },function(){
-        $("#emprendedor").html("SOY EMPRENDEDOR");
+        $("#emprendedor").html("SOY <br class='m-hide l-hide'> EMPRENDEDOR");
       });
 
     
@@ -104,7 +104,7 @@ require('./slides.min');
       empresaControl();
       $('#clienteDescriptionEmpresa').toggle("slow");
       $("#empresa").html("¡CREZCAMOS!");
-      $("#emprendedor").html("SOY EMPRENDEDOR");
+      $("#emprendedor").html("SOY <br class='m-hide l-hide'> EMPRENDEDOR");
 
       if($('#clienteDescriptionEmprendedor').show()){
         $('#clienteDescriptionEmprendedor').hide();
@@ -117,7 +117,7 @@ require('./slides.min');
       empresaControl();
       $('#clienteDescriptionEmprendedor').toggle("slow");
       $("#emprendedor").html("¡EMPRENDAMOS!");
-      $("#empresa").html("TENGO UNA EMPRESA");
+      $("#empresa").html("TENGO UNA <br class='m-hide l-hide'> EMPRESA");
 
       if($('#clienteDescriptionEmpresa').show()){
         $('#clienteDescriptionEmpresa').hide();
