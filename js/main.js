@@ -51,6 +51,41 @@ require('./slides.min');
   });
 
 
+
+  //funciones scrolltop para barra de navegacion
+  $(".scroll-presupuestador").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#presupuestador").offset().top
+    }, 1000);
+  });
+
+  $(".scroll-que-hacemos").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#que-hacemos").offset().top
+    }, 1000);
+  });
+
+  $(".scroll-como-hacemos").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#como-hacemos").offset().top
+    }, 1000);
+  });
+
+  $(".scroll-nuestros-proyectos").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#nuestros-proyectos").offset().top
+    }, 1000);
+  });
+
+  $(".scroll-contacto").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#contacto").offset().top
+    }, 1000);
+  });
+
+
+
+
   //funcion para tipoCliente
   let empresaActive = false;
   let emprendedorActive = false;
