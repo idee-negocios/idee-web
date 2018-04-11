@@ -1,0 +1,21 @@
+form.form.s-100.m-80.l-60(action="" name="jkForm" method="post")
+
+    .form-item.s-100
+        input#text1.required(type="text" name="nombre" )
+        label(for="text1") Nombre, particular o empresa(*):
+    .form-item.s-100
+        input#tel1.required(type="tel" name="celular" )
+        label(for="tel1") Teléfono(*):
+    .form-item.s-100
+        input#email1.required(type="email" name="email" )
+        label(for="tel1") E-mail(*):
+    .form-item.s-100
+        textarea#textarea1.required(name="mensaje" rows="4")
+        label(for="tel1") Mensaje(*):
+
+    .form-item.s-100
+        input#submit.form-button(type="submit" value="Enviar")
+
+.jk-container.s-flex-center.contact-message.hide
+  h3.jk-item MUCHAS GRACIAS
+  h4.jk-item EN BREVE NOS COMUNICAREMOS CON VOS

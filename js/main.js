@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import * as Navbar from './navbar';
+import * as Form from './form';
 
 window.$ = $;
 window.jQuery = $;
@@ -7,6 +8,7 @@ window.jQuery = $;
 require('./slides.min');
 
 (function(){
+  //slider
   $('.slider').slidesjs({
     play: {
       active: false,

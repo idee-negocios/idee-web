@@ -1,5 +1,5 @@
 @import "./base/main.scss";
-
+@import "./base/form.scss";
 
 //ID PARA LINK
 #que-hacemos,#como-hacemos,#contacto,#presupuestador,#nuestros-proyectos{
@@ -496,7 +496,7 @@
             }
             @media screen and (min-width:getBreakpoint(l) ){
                 font-size: 60px;
-                margin:0 10px 33px;
+                margin:0 10px 15px;
             }
         }
     }
@@ -537,7 +537,7 @@
             }
             @media screen and (min-width:getBreakpoint(l) ){
                 font-size: 60px;
-                margin:0 10px 33px;
+                margin:0 10px 15px;
             }
         }
     }

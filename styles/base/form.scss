@@ -1,0 +1,273 @@
+// Colores
+// "red2" "red" "pink" "purple" "deep-purple" "blue" "light-blue"
+// "orange" "deep-orange" "brown" "blue-grey" "grey" "black" "white"
+// "cyan" "teal" "green" "light-green" "lime" "yellow" "amber" "indigo"
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: 'BebasNeue';
+    box-shadow: getShadow(1);
+    background-color: getColor(black,0);
+    border-radius: 15px;
+    margin: 15px 0;
+    padding: 15px 5px;
+    @media screen and (min-width: getBreakpoint(m)) {
+        margin: 30px 0;
+        padding: 30px;
+    }
+    .form-item {
+        position: relative;
+        padding: $gutter;
+    }
+    label {
+        font-size: 20px;
+        color:getColor(grey,0);
+    }
+    textarea{
+        @media screen and (min-width: getBreakpoint(m)) {
+            font-size: 20px;
+        }
+
+        color:white;
+        position: relative;
+        z-index: 10;
+        outline: none;
+        background: none;
+        border: none;
+        border-bottom: 1px solid getColor(grey, 8);
+        // border-left: 1px solid getColor(grey, 8);
+        width: 100%;
+        font-family: "open sans condensed";
+        font-weight: bold;
+        border-radius: 2px;
+        padding: 10px 0;
+        font-size: 18px;
+        margin-top: 15px;
+        
+        &:focus,
+        &:active {
+            border-bottom: 2px solid getColor(green, 4);
+            +label {
+                color: getColor(green, 5);
+            }
+        }
+        +label{
+            position:absolute;
+            left: 0;
+            padding-left:15px;
+            top: 14px;
+            font-size: 20px;
+            z-index: 5;
+            transition: all .2s ease;
+            font-size: 18px;
+            @media screen and (min-width: getBreakpoint(l)) {
+                font-size: 20px;
+            }
+        }
+        &.error {
+            border-bottom: 2px solid red;
+
+            +label {
+                color: getColor(red,0);
+                &:after {
+                    content: " incorrecto";
+                    // position: absolute;
+                    white-space: nowrap;
+                    left: 0;
+                    top: 54px;
+                    padding-left: 2px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px black inset;
+        -webkit-text-fill-color: white;
+    }
+
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"] {
+        @media screen and (min-width: getBreakpoint(l)) {
+            font-size: 20px;
+        }
+        color:white;
+        position: relative;
+        z-index: 10;
+        outline: none;
+        background: none;
+        border: none;
+        border-bottom: 1px solid getColor(grey, 8);
+        // border-left: 1px solid getColor(grey, 8);
+        width: 100%;
+        font-family: "open sans condensed";
+        font-weight: bold;
+        border-radius: 2px;
+        padding: 10px 0;
+        font-size: 18px;
+
+        &:focus,
+        &:active {
+            // border-left: 2px solid getColor(green, 4);
+            border-bottom: 2px solid getColor(green, 4);
+            +label {
+                top: 0%;
+                font-size: 17px;
+                color: getColor(green, 5);
+            }
+        }
+        +label{
+            position:absolute;
+            left: 0;
+            padding-left:15px;
+            top:40%;
+            z-index: 5;
+            transition: all .2s ease;
+            font-size: 18px;
+            @media screen and (min-width: getBreakpoint(l)) {
+                font-size: 20px;
+            }
+        }
+
+        &.active {
+            // border-bottom: 2px solid getColor(green,4);
+            +label {
+                top: 0%;
+                font-size: 17px;
+            }
+        }
+        &.error {
+            border-bottom: 2px solid red;
+
+            +label {
+                color: getColor(red,0);
+                &:after {
+                    content: " incorrecto";
+                    // position: absolute;
+                    white-space: nowrap;
+                    left: 0;
+                    top: 54px;
+                    padding-left: 2px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .form-button {
+        background-color: getColor(red, 7);
+        border: none;
+        padding: 15px;
+        margin: 0;
+        font-family: "BebasNeue";
+        letter-spacing: 1px;
+        color: white;
+        font-size: 24px;
+        width: 100%;
+        cursor: pointer;
+    }
+    .form-button{
+
+    }
+
+
+    // text-area {}
+    // input[type="checkbox"],
+    // input[type="radio"] {
+    //     display: none;
+    //     cursor: pointer;
+    //     +label {
+    //         cursor: pointer;
+    //         transition: all .3s ease;
+    //         &:before {
+    //             content: "";
+    //             display: inline-block;
+    //             width: 18px;
+    //             height: 18px;
+    //             background: none;
+    //             border: 2px solid getColor(grey, 6);
+    //             margin-right: 8px;
+    //             position: relative;
+    //             top: 4px;
+    //         }
+    //     }
+    //     &.error {
+    //         +label {
+    //             border-radius: 10px;
+    //             padding: 2px;
+    //             background-color: getColor(red, 2);
+    //             color: 14px;
+    //             &::before {
+    //                 border: 2px solid red;
+    //             }
+    //         }
+    //     }
+    // }
+    // input[type="checkbox"] {
+    //     +label::before {
+    //         border-radius: 20%;
+    //     }
+    //     &:checked+label {
+    //         &::before {
+    //             content: "";
+    //             margin-right: 10px;
+    //             margin-left: 6px;
+    //             top: 2px;
+    //             width: 10px;
+    //             height: 18px;
+    //             border-top: 2px solid transparent;
+    //             border-left: 2px solid transparent;
+    //             border-right: 2px solid getColor(green, 5);
+    //             border-bottom: 2px solid getColor(green, 5);
+    //             transform: rotate(40deg);
+    //             transition: .2s ease;
+    //         }
+    //     }
+    // }
+    // input[type="radio"] {
+    //     +label::before {
+    //         border-radius: 50%;
+    //     }
+    //     &:checked+label {
+    //         color: getColor(green, 5);
+    //         &::before {
+    //             background-color: getColor(green, 5);
+    //             border: 2px solid getColor(green, 5);
+    //             box-shadow: inset 1px 1px 0 1px white, inset 1px -1px 0 1px white, inset -1px 1px 0 1px white, inset -1px -1px 0 1px white;
+    //             transition: all .2s ease;
+    //         }
+    //     }
+    // }
+}
+
+.contact-message{
+    margin: 45px 0;
+    h3{
+        font-size: 30px;
+        margin: 10px;
+    }
+
+    h4{
+        font-size: 20px;
+        margin: 8px;
+    }
+
+    @media screen and ( min-width : getBreakpoint(m) ){
+        margin: 65px 0 45px;
+
+        h3{
+            font-size: 60px;
+            margin: 10px;
+        }
+
+        h4{
+            font-size: 40px;
+            margin: 8px;
+        }
+    }
+}
