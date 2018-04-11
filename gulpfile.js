@@ -33,7 +33,7 @@ var onError = function(err) {
 gulp.task('styles', function() {
   return gulp.src('styles/*.scss')
     .pipe(plumber({ errorHandler: onError }))
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(sass({
       includePaths: ['node_modules']
     }))
@@ -41,7 +41,7 @@ gulp.task('styles', function() {
       browsers: ['last 5 versions'],
       cascade: false}))
     .pipe(cleanCSS())
-    .pipe(sourcemaps.write())
+    // .pipe(sourcemaps.write())
     .pipe(rename({ suffix: '.min'}))
     .pipe(gulp.dest('build/css'));
 });
