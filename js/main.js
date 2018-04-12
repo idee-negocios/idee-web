@@ -9,6 +9,7 @@ require('./slides.min');
 
 (function(){
   //slider
+  cargarSlider();
   $('.slider').slidesjs({
     play: {
       active: false,
@@ -164,19 +165,50 @@ require('./slides.min');
 
 
 
-  // //funcion cargar imagenes de slider
-  // function cargarSlider(){
-  //   var slider = document.getElementsByClassName("slidesjs-control")[0];
-  //   slider.innerHTML = `
-  //   <img class="slide" src="img/slider-home1.png", alt="Social Media")>
-  //   <img class="slide" src="img/slider-home2.png", alt="Marketin Digital")>
-  //   <img class="slide" src="img/slider-home3.png", alt="Desarrollo Web")>
-  //   <img class="slide" src="img/slider-home4.png", alt="Publicidad")>
-  //   <img class="slide" src="img/slider-home5.png", alt="Sistemas")>
-  //   <img class="slide" src="img/slider-home6.png", alt="Diseño Gráfico")>
-  //   `
-  // }
-  // window.addEventListener('DOMContentLoaded', cargarSlider);
+  //funcion cargar imagenes de slider
+  function cargarSlider(){
+    var slider = document.getElementsByClassName("header-slider")[0];
+    slider.innerHTML = `
+    <div class="slide">
+      <picture>
+        <source srcset="img/index/home-slider1.webp" type="image/webp"/>
+        <img src="img/index/home-slider1.jpg" alt="SOCIAL MEDIA"/>
+      </picture>
+    </div>
+    <div class="slide">
+      <picture>
+        <source srcset="img/index/home-slider2.webp" type="image/webp"/>
+        <img src="img/index/home-slider2.jpg" alt="MARKETING DIGITAL"/>
+      </picture>
+    </div>
+    <div class="slide">
+      <picture>
+        <source srcset="img/index/home-slider3.webp" type="image/webp"/>
+        <img src="img/index/home-slider3.jpg" alt="DESAROLLO WEB"/>
+      </picture>
+    </div>
+    <div class="slide">
+      <picture>
+        <source srcset="img/index/home-slider4.webp" type="image/webp"/>
+        <img src="img/index/home-slider4.jpg" alt="PUBLICIDAD"/>
+      </picture>
+    </div>
+    <div class="slide">
+      <picture>
+        <source srcset="img/index/home-slider5.webp" type="image/webp"/>
+        <img src="img/index/home-slider5.jpg" alt="SISTEMAS"/>
+      </picture>
+    </div>
+    <div class="slide">
+      <picture>
+        <source srcset="img/index/home-slider6.webp" type="image/webp"/>
+        <img src="img/index/home-slider6.jpg" alt="DISEÑO GRÁFICO"/>
+      </picture>
+    </div>
+    `;
+    
+  }
+
   window.addEventListener('DOMContentLoaded',empresaControl);
 })();
 
