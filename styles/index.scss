@@ -134,9 +134,10 @@
             @media screen and (min-width: 375px ){
                 min-height: 100px;
             }
-
+            
         }
         h4{
+            cursor:pointer;
             font-family: 'BebasNeue';
             font-weight: 100;
             letter-spacing: 2px;
@@ -145,6 +146,7 @@
             margin:0;
             color: white;
             font-size: 18px;
+            white-space: nowrap;
             @media screen and (min-width:getBreakpoint(m) ){
                 font-size: 30px;
             }
@@ -203,13 +205,18 @@
                 padding: 5px 15px 15px;
             }
         }
-        a{
+        a{  
+            cursor: pointer;
             font-family: "BebasNeue";
             background-color: white;
             color: getColor(red2,6);
-            padding: 10px 20px;
+            padding: 10px 10px;
             font-size: 19px;
+            margin:  5px 15px;
             // font-weight: bold;
+            @media screen and (min-width:getBreakpoint(l) ){
+                padding: 10px 20px;
+            }
             @media screen and (min-width:getBreakpoint(l) ){
                 font-size: 26px;
                 padding: 15px 30px;
