@@ -33,7 +33,7 @@ window.formUrl = 'https://dev.ideenegocios.com.ar:3001/idee-negocios';
         else {
             console.log("enviando...");
             form.submit.classList.add("correcto");
-            gtag_report_conversion();
+        
 
             //API ALAN
             var contactData = $(this).serializeArray();
@@ -54,21 +54,6 @@ window.formUrl = 'https://dev.ideenegocios.com.ar:3001/idee-negocios';
             });
         }
     }
-
-    //funcion de medicion
-    function gtag_report_conversion(url) {
-        var callback = function() {
-            if (typeof(url) != 'undefined') {
-                window.location = url;
-            }
-        };
-        gtag('event', 'conversion', {
-            'send_to': 'AW-857622524/dJLQCKupp4ABEPyP-ZgD',
-            'event_callback': callback
-        });
-        return false;
-    }
-
 
     // validar input
     var validarInput = function() {
