@@ -30,18 +30,21 @@ html(lang="es")
     <meta name="theme-color" content="#ffffff">
     <meta name="google-site-verification" content="lqeEMiqJNiBrMOBvtoZmTF8j1VIjx-Re7AxacMTI-X8" />
 
-
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-NKV4NFH');
 
 
   body
     block content
+        
     script(src="js/main.bundle.js")
-    script(async src="https://www.googletagmanager.com/gtag/js?id=UA-79939819-1%22%3E") 
-    script
-      |window.dataLayer = window.dataLayer || [];
-      |function gtag(){dataLayer.push(arguments);}
-      |gtag('js', new Date());
-      |gtag('config', 'UA-79939819-1');
+    noscript
+      iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-NKV4NFH", height="0", width="0", style="display:none;visibility:hidden")
+
     //- <!-- Facebook Pixel Code -->
     //- script
     //-   |!function(f,b,e,v,n,t,s)
