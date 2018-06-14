@@ -11,6 +11,28 @@
     }
 }
 
+// MODAL CONTAINER
+.modal-container{
+    position: fixed;
+    left: 0;
+    top:0;
+    z-index: 110;
+    width: 100%;
+    height: 100%;
+    margin:0;
+    background-color: rgba(0,0,0,0.6);
+    animation-name: modal-container;
+    animation-duration: .4s;
+    @keyframes modal-container {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+        
+    }
+}
 
 //SECTION: galeria
 .galeria{
@@ -529,7 +551,9 @@
 //SECTION: proyectos
 // .proyectos-container{
 // }
+
 .proyectos{  
+    position: relative;
     font-family: 'Open Sans Condensed';
     .proyectos-title{
         text-align: center;
@@ -549,7 +573,7 @@
         }
     }
     .box{
-        position: relative;
+        // position: relative;
         padding: 10px;
         margin: 0;
         
@@ -589,6 +613,198 @@
                         transform: scale(1.14);
                         transition: .4s;
                     }
+                }
+            }
+        }
+    }  
+}
+
+.proyectos-description{
+    .box-description-container{
+        position: fixed;
+        animation-name: proyectos-description;
+        animation-duration: .4s;
+        z-index: 120;    
+        right: 50%;
+        bottom:50%;
+        transform: translateX(50%) translateY(50%);
+
+        @keyframes proyectos-description {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        @media screen and (min-width: 500px ){
+            max-width: 80%;
+            
+        }
+        @media screen and (min-width: 700px ){
+            max-width: 70%;
+            
+        }
+        @media screen and (min-width: 1024px ){
+            max-width: 95%;
+            
+        }
+        @media screen and (min-width: 1200px ){
+            max-width: 80%;
+            
+        }
+        @media screen and (min-width: 1300px ){
+            max-width: 70%;
+            
+        }
+    }
+    
+    .box-description{
+        
+        border-radius: 5px;
+        padding: 10px;
+        background-color: getColor(red,7);
+        box-shadow: 0 0px 30px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2);
+        overflow: hidden;
+        height: 100%;        
+        width: 100%;
+        margin: 0;
+        @media screen and (min-width:400px){
+            margin: 0 12px;
+        }
+        @media screen and (min-width:getBreakpoint(l) ){
+            margin: 0;
+            flex-wrap: nowrap;
+            padding: 15px;
+        }
+        
+        .box-description-img{    
+            //modificar scroll
+            // &::-webkit-scrollbar-track
+            // {
+            //     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            //     border-radius: 10px;
+            //     background-color: #F5F5F5;
+            // }
+            // &::-webkit-scrollbar
+            // {
+            //     width: 12px;
+            //     background-color: #F5F5F5;
+            // }
+            // &::-webkit-scrollbar-thumb
+            // {
+            //     border-radius: 10px;
+            //     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+            //     background-color: #D62929;
+            // }
+            width: 290px;
+            height: 170px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            margin: 0;
+            padding: 0;
+            flex-shrink: 0;
+            border-radius: 5px;
+            @media screen and (min-width:getBreakpoint(m) ){
+                width: 350px;
+                height: 200px;
+    
+            }
+        @media screen and (min-width:getBreakpoint(l) ){
+            width: 700px;
+            height: 400px;
+
+        }
+
+        }
+        .box-description-text{
+            flex-wrap: wrap;
+            font-family: "open sans condensed";
+            text-align: left;
+            color:white;
+            font-weight: bold;
+            margin: 0;
+            padding: 0 0 10px;
+            width: 700px;
+            @media screen and (min-width:getBreakpoint(l) ){
+                padding: 0 0 0 15px;
+                
+            }
+            .title,.subtitle,.subtitle2,.description{
+                margin:0;
+                text-align: center;
+                @media screen and (min-width:getBreakpoint(l) ){
+                    text-align: start;
+                }
+            }
+            .title{
+                font-size: 33px;
+                padding: 0  ;
+                line-height: 44px;
+                letter-spacing: 2px;
+                @media screen and (min-width:getBreakpoint(l) ){
+                    font-size: 40px;
+                    
+                }
+                
+            }
+            .subtitle{
+                font-size: 24px;
+                padding: 0 0 5px;
+                line-height: 30px;
+                @media screen and (min-width:getBreakpoint(l) ){
+                    font-size:26px;
+                    padding: 0 0 15px;
+                }
+                
+            }
+            .subtitle2{
+                font-size: 18px;
+                line-height: 24px;
+                padding: 0 10px;
+                white-space: nowrap;
+                // @media screen and (min-width: 375px){
+                //     font-size: 1px;
+                // }
+                @media screen and (min-width: 350px){
+                    font-size: 15px;
+                    padding: 0 5px;
+                }
+                @media screen and (min-width: 375px){
+                    font-size: 16px;
+                }
+                @media screen and (min-width:getBreakpoint(m) ){
+                    font-size: 18px;
+                }
+                @media screen and (min-width:getBreakpoint(l) ){
+                    font-size: 20px;
+                }
+            }
+            .description{
+                font-size: 18px;
+                transition: .2s;
+                font-weight: normal;
+                line-height: 24px;
+                padding-left:5px;
+                @media screen and (min-width:getBreakpoint(l) ){
+                    font-size: 18px;
+                }
+            }
+            .active{
+                display: flex;
+                align-content: center;
+                align-items: center;
+                font-weight: bolder;
+                color: getColor(grey,5);
+                @media screen and (min-width:getBreakpoint(l) ){
+                    color:white;
+                    &::before{
+                        content: "► ";
+                        font-size: 14px;
+                        padding: 0 5px 0 0;
+                    
+                    }
+
                 }
             }
         }
